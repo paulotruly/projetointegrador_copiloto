@@ -1,17 +1,62 @@
+<style>
+
+   /* comentário */ 
+
+  .tudo{
+  --background: white;
+}
+
+  .header{
+    padding: 20px;
+    --background: rgba(26, 38, 203, 1);
+  }
+
+  #barra-nav{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  #header-logo{
+    margin-right: 140px;
+  }
+
+  #bt-config{
+    font-size: 17px;
+  }
+
+  #bt-logout{
+    font-size: 17px;
+  }
+
+  #header-botoes ion-icon{
+    color: white;
+  }
+
+</style>
+
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+  <ion-toolbar class="header">
+
+    <nav id="barra-nav">
+
+      <div id="header-logo">
+      <img src="https://i.imgur.com/yBaK7kC.png" width="195px" height="62px">
+      </div>
+
+      <div id="header-botoes">
+      <ion-button size="small" fill="clear" id="bt-config"> <ion-icon name="cog"></ion-icon> </ion-button>
+      <ion-button size="small" fill="clear" id="bt-logout"> <ion-icon name="log-out"></ion-icon> </ion-button>
+      </div>
+
+
+    </nav>
+
   </ion-toolbar>
+
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="tudo" [fullscreen]="true">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
