@@ -1,0 +1,7 @@
+{
+  "name": "Copiloto",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
