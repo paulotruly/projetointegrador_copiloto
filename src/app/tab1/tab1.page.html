@@ -2,61 +2,141 @@
 
    /* comentário */ 
 
-  .tudo{
-  --background: white;
-}
-
   .header{
-    padding: 20px;
+    padding: 1px 1px;
     --background: rgba(26, 38, 203, 1);
   }
 
   #barra-nav{
     display: flex;
-    width: 100%;
-    margin: 0 auto;
     align-items: center;
+    justify-content: space-between;
   }
 
-  #header-logo{
-    margin-right: 140px;
-  }
-
-  #bt-config{
-    font-size: 17px;
-  }
-
-  #bt-logout{
-    font-size: 17px;
-  }
-
-  #header-botoes ion-icon{
+  #header-botoes ion-icon, ion-button{
     color: white;
+    font-size: 25px;
   }
+
+  #topo-home ion-text{
+    color: black;
+  }
+
+
+
+
+
+
+
+  ion-content{
+    --ion-background-color: white;
+  }
+
+  .topo{
+    padding: 10px 20px 0px 20px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .topo h1{
+    color: black;
+    font-size: 22px;
+    font-weight: bold; 
+  }
+
+  .topo a{
+    color: rgba(26, 38, 203, 1);
+    font-size: 15px;
+    font-style: italic; 
+  }
+
+
+
+
+
+   /* Aqui tô tentando fazer o CSS do comentário lá de baixo */
+
+  .cards ion-card, .aaa{
+    border-radius: 30px;
+    padding: 10px 20px;
+    background-color: rgba(244, 245, 255, 1);
+    box-shadow: none;
+    color: rgba(115, 116, 133, 1);
+  }
+
+  .aaa{
+    display: flex;
+    align-items: center; 
+  }
+
+  .aaa img{
+    border-radius: 100%;
+  }
+
+  .aaa h1{
+    color: black;
+    font-size: 20px;
+    font-weight: bold; 
+    padding-left: 10px;
+  }
+
+  .ccc h2{
+    font-size: 14px;
+
+  }
+
+  .bbb{
+    padding: 0px 10px 20px 20px;
+  }
+
+
+  
 
 </style>
 
-<ion-header [translucent]="true">
-  <ion-toolbar class="header">
+  <ion-header [translucent]="true">
+    <ion-toolbar class="header">
+      <nav id="barra-nav">
+        <img src="https://i.imgur.com/yBaK7kC.png" id="header-logo" width="195px" height="62px">
 
-    <nav id="barra-nav">
+        <ul id="header-botoes">
+          <ion-button class="hb-items" size="small" fill="clear" class="bt-config"> <ion-icon name="cog"></ion-icon> </ion-button>
+          <ion-button class="hb-items" size="small" fill="clear" class="bt-logout"> <ion-icon name="log-out"></ion-icon> </ion-button>
+        </ul>
+      </nav>
+    </ion-toolbar>
+  </ion-header>
 
-      <div id="header-logo">
-      <img src="https://i.imgur.com/yBaK7kC.png" width="195px" height="62px">
-      </div>
+  <ion-content [fullscreen]="true">
+  
+    <div class="topo">
+      <h1> Tópicos recentes </h1>
+      <a href="">Ingressar numa disciplina</a>
+    </div> 
 
-      <div id="header-botoes">
-      <ion-button size="small" fill="clear" id="bt-config"> <ion-icon name="cog"></ion-icon> </ion-button>
-      <ion-button size="small" fill="clear" id="bt-logout"> <ion-icon name="log-out"></ion-icon> </ion-button>
-      </div>
+    <!-- Tô tentando fazer um ícone que fique de um lado, do outro fique o nome do usuário e abaixo um textinho menor, vou comentar o CSS também -->
+
+    <div class="cards">
+      <ion-card>
+        <div class="aaa">
+          <img width= "40px" height="40px" src="https://cdn-icons-png.flaticon.com/512/3750/3750032.png">
+          <div class="ccc">
+            <h1> Nome do professor aqui </h1>
+            <h2> aaa </h2>
+          </div>
+        </div>
+        <div class="bbb">
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </div>
+      </ion-card>
+    </div>
+
+    
 
 
-    </nav>
 
-  </ion-toolbar>
 
-</ion-header>
-
-<ion-content class="tudo" [fullscreen]="true">
-
-</ion-content>
+  
+  </ion-content>
+  
