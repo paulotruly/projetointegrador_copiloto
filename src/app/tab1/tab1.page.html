@@ -57,41 +57,50 @@
 
    /* Aqui tô tentando fazer o CSS do comentário lá de baixo */
 
-  .cards ion-card, .aaa{
-    border-radius: 30px;
-    padding: 10px 20px;
-    background-color: rgba(244, 245, 255, 1);
+  ion-card{
+    --background: rgb(244, 245, 255, 1);
     box-shadow: none;
-    color: rgba(115, 116, 133, 1);
   }
 
-  .aaa{
+  .card-prof{
+    padding-top: 10px;
     display: flex;
-    align-items: center; 
   }
 
-  .aaa img{
-    border-radius: 100%;
+  .card-prof aside{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 12px;
   }
 
-  .aaa h1{
-    color: black;
+  .card-prof img{
+    border-radius: 50%;
+  }
+
+  .card-prof h1{
     font-size: 20px;
-    font-weight: bold; 
-    padding-left: 10px;
+    color: black;
   }
 
-  .ccc h2{
-    font-size: 14px;
-
+  .card-prof p{
+    font-size: 12px;
+    color: rgba(115, 116, 133, 1)
   }
 
-  .bbb{
-    padding: 0px 10px 20px 20px;
+  #infoii-prof{
+    line-height: 0.1px;
+    margin-bottom: 14px;
   }
 
-
+  ion-card{
+    border-radius: 30px;
+  }
   
+  ion-card #prof-article{
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+
 
 </style>
 
@@ -109,30 +118,111 @@
   </ion-header>
 
   <ion-content [fullscreen]="true">
+
+    <!-- TOPO DO CONTEÚDO DA PÁGINA INICIAL -->
   
     <div class="topo">
       <h1> Tópicos recentes </h1>
       <a href="">Ingressar numa disciplina</a>
     </div> 
 
-    <!-- Tô tentando fazer um ícone que fique de um lado, do outro fique o nome do usuário e abaixo um textinho menor, vou comentar o CSS também -->
+    <!-- CARD DE ATIVIDADES RECENTES PUBLICADAS PELOS PROFESSORES -->
+    <!-- A idéia é que toda vez que um professor publica um artigo essa página inicial é atualizada com uma prévia desse artigo -->
 
-    <div class="cards">
       <ion-card>
-        <div class="aaa">
-          <img width= "40px" height="40px" src="https://cdn-icons-png.flaticon.com/512/3750/3750032.png">
-          <div class="ccc">
-            <h1> Nome do professor aqui </h1>
-            <h2> aaa </h2>
+      <div class="card-prof">
+        <aside>
+          <img width= "60px" height="60px" src="https://cdn-icons-png.flaticon.com/512/3750/3750032.png">
+        </aside>
+        <div id="infoii-prof">
+          <main>
+            <section> 
+              <h1> Nome do professor aqui </h1>
+            </section>
+          </main>
+          <article>
+            <p> 20min <p>
+          </article>
+        </div>
+      </div>
+        <p id="prof-article"> Here's a small text description for the card content. Nothing more, nothing less. </p>
+      </ion-card>
+
+      <ion-card>
+        <div class="card-prof">
+          <aside>
+            <img width= "60px" height="60px" src="https://cdn-icons-png.flaticon.com/512/3750/3750032.png">
+          </aside>
+          <div id="infoii-prof">
+            <main>
+              <section> 
+                <h1> Nome do professor aqui </h1>
+              </section>
+            </main>
+            <article>
+              <p> 20min <p>
+            </article>
           </div>
         </div>
-        <div class="bbb">
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </div>
-      </ion-card>
-    </div>
+          <p id="prof-article"> Here's a small text description for the card content. Nothing more, nothing less. </p>
+        </ion-card>
 
-    
+        <ion-card>
+          <div class="card-prof">
+            <aside>
+              <img width= "60px" height="60px" src="https://cdn-icons-png.flaticon.com/512/3750/3750032.png">
+            </aside>
+            <div id="infoii-prof">
+              <main>
+                <section> 
+                  <h1> Nome do professor aqui </h1>
+                </section>
+              </main>
+              <article>
+                <p> 20min <p>
+              </article>
+            </div>
+          </div>
+            <p id="prof-article"> Here's a small text description for the card content. Nothing more, nothing less. </p>
+          </ion-card>
+
+          <ion-card>
+            <div class="card-prof">
+              <aside>
+                <img width= "60px" height="60px" src="https://cdn-icons-png.flaticon.com/512/3750/3750032.png">
+              </aside>
+              <div id="infoii-prof">
+                <main>
+                  <section> 
+                    <h1> Nome do professor aqui </h1>
+                  </section>
+                </main>
+                <article>
+                  <p> 20min <p>
+                </article>
+              </div>
+            </div>
+              <p id="prof-article"> Here's a small text description for the card content. Nothing more, nothing less. </p>
+            </ion-card>
+
+            <ion-card>
+              <div class="card-prof">
+                <aside>
+                  <img width= "60px" height="60px" src="https://cdn-icons-png.flaticon.com/512/3750/3750032.png">
+                </aside>
+                <div id="infoii-prof">
+                  <main>
+                    <section> 
+                      <h1> Nome do professor aqui </h1>
+                    </section>
+                  </main>
+                  <article>
+                    <p> 20min <p>
+                  </article>
+                </div>
+              </div>
+                <p id="prof-article"> Here's a small text description for the card content. Nothing more, nothing less. </p>
+              </ion-card>
 
 
 

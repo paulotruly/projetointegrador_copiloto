@@ -1,25 +1,264 @@
-<ion-header [translucent]="true">
-  <ion-toolbar class="header">
-    <nav id="barra-nav">
-      <img src="https://i.imgur.com/yBaK7kC.png" id="header-logo" width="195px" height="62px">
+<style>
 
-      <ul id="header-botoes">
-        <ion-button class="hb-items" size="small" fill="clear" class="bt-config"> <ion-icon name="cog"></ion-icon> </ion-button>
-        <ion-button class="hb-items" size="small" fill="clear" class="bt-logout"> <ion-icon name="log-out"></ion-icon> </ion-button>
-      </ul>
-    </nav>
-  </ion-toolbar>
-</ion-header>
+  /* comentário */ 
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ .header{
+   padding: 1px 1px;
+   --background: rgba(26, 38, 203, 1);
+ }
 
-  <div class="topo">
-    <h1> Tópicos recentes </h1>
-  </div>
+ #barra-nav{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
 
-</ion-content>
+ #header-botoes ion-icon, ion-button{
+   color: white;
+   font-size: 25px;
+ }
+
+ #topo-home ion-text{
+   color: black;
+ }
+
+ ion-content{
+   --ion-background-color: white;
+ }
+
+ .disc-all{
+   padding: 10px 20px 0px 20px;
+   align-items: center;
+ }
+
+ .disc-all h1{
+   color: black;
+   font-size: 22px;
+   font-weight: bold;
+   padding-bottom: 10px;
+ }
+
+  .topo a{
+    color: rgba(26, 38, 203, 1);
+    font-size: 15px;
+    font-style: italic; 
+  }
+
+ ion-card{
+   --background: rgb(244, 245, 255, 1);
+   box-shadow: none;
+ }
+
+ .card-prof{
+   padding-top: 10px;
+   display: flex;
+ }
+
+ .card-prof aside{
+   padding-right: 20px;
+   padding-left: 20px;
+   padding-top: 12px;
+ }
+
+ .card-prof img{
+   border-radius: 50%;
+ }
+
+ .card-prof h1{
+   font-size: 20px;
+   color: black;
+ }
+
+ .card-prof p{
+   font-size: 12px;
+   color: rgba(115, 116, 133, 1)
+ }
+
+ #infoii-prof{
+   line-height: 0.1px;
+   margin-bottom: 14px;
+ }
+
+ ion-card{
+   border-radius: 30px;
+ }
+ 
+ ion-card #prof-article{
+   padding-left: 20px;
+   padding-bottom: 20px;
+ }
+
+ .perfil-topo img{
+  border-radius: 50%;
+  }
+
+ .perfil-topo{
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: none;
+ }
+
+ .perfil-topo aside{
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 12px;
+}
+
+ .perfil-topo h1{
+  font-size: 20px;
+  color: black;
+ }
+
+ .perfil-topo p{
+  font-size: 12px;
+  color: rgba(115, 116, 133, 1)
+  }
+
+  #info-copiloto{
+    line-height: 0.1px;
+    margin-bottom: 14px;
+  }
+
+  #disc-i{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    border-radius: 20px;
+    margin: 5px;
+  }
+
+  #disc-ii{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 20px;
+    margin: 5px;
+  }
+
+  #disc-iii{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 20px;
+    margin: 5px;
+  }
+
+  .atvds h1{
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin-left: 20px;
+  }
+
+</style>
+
+ <ion-header [translucent]="true">
+   <ion-toolbar class="header">
+     <nav id="barra-nav">
+       <img src="https://i.imgur.com/yBaK7kC.png" id="header-logo" width="195px" height="62px">
+
+       <ul id="header-botoes">
+         <ion-button class="hb-items" size="small" fill="clear" class="bt-config"> <ion-icon name="cog"></ion-icon> </ion-button>
+         <ion-button class="hb-items" size="small" fill="clear" class="bt-logout"> <ion-icon name="log-out"></ion-icon> </ion-button>
+       </ul>
+     </nav>
+   </ion-toolbar>
+ </ion-header>
+
+ <ion-content [fullscreen]="true">
+
+   <!-- TOPO DO CONTEÚDO DA PÁGINA INICIAL -->
+
+    <div class="perfil-topo">
+      <aside>
+        <img width= "60px" height="60px" src="https://cdn-icons-png.flaticon.com/512/3750/3750032.png">
+      </aside>
+      <div id="info-copiloto">
+        <main>
+          <section> 
+            <h1> Nome do copiloto aqui </h1>
+          </section>
+        </main>
+        <article>
+          <p> Copiloto <p>
+        </article>
+      </div>
+    </div>
+
+    <div class="disc-all">
+      <h1> Disciplinas </h1>
+
+      <div class="disc-topo">
+        <div id="disc-i"> </div>
+        <div id="disc-ii"> </div>
+        <div id="disc-iii"> </div>
+      </div>
+    </div> 
+
+   <!-- CARD DE ATIVIDADES RECENTES PUBLICADAS PELOS PROFESSORES -->
+   <!-- A idéia é que toda vez que um professor publica um artigo essa página inicial é atualizada com uma prévia desse artigo -->
+
+   <div class="atvds">
+      <h1> Atividades </h1>
+    </div> 
+
+     <ion-card>
+     <div class="card-prof">
+       <aside>
+         <img width= "60px" height="60px" src="https://cdn-icons-png.flaticon.com/512/3750/3750032.png">
+       </aside>
+       <div id="infoii-prof">
+         <main>
+           <section> 
+             <h1> Nome do professor aqui </h1>
+           </section>
+         </main>
+         <article>
+           <p> 20min <p>
+         </article>
+       </div>
+     </div>
+       <p id="prof-article"> Here's a small text description for the card content. Nothing more, nothing less. </p>
+     </ion-card>
+
+     <ion-card>
+      <div class="card-prof">
+        <aside>
+          <img width= "60px" height="60px" src="https://cdn-icons-png.flaticon.com/512/3750/3750032.png">
+        </aside>
+        <div id="infoii-prof">
+          <main>
+            <section> 
+              <h1> Nome do professor aqui </h1>
+            </section>
+          </main>
+          <article>
+            <p> 20min <p>
+          </article>
+        </div>
+      </div>
+        <p id="prof-article"> Here's a small text description for the card content. Nothing more, nothing less. </p>
+      </ion-card>
+
+      <ion-card>
+        <div class="card-prof">
+          <aside>
+            <img width= "60px" height="60px" src="https://cdn-icons-png.flaticon.com/512/3750/3750032.png">
+          </aside>
+          <div id="infoii-prof">
+            <main>
+              <section> 
+                <h1> Nome do professor aqui </h1>
+              </section>
+            </main>
+            <article>
+              <p> 20min <p>
+            </article>
+          </div>
+        </div>
+          <p id="prof-article"> Here's a small text description for the card content. Nothing more, nothing less. </p>
+        </ion-card>
+ 
+ </ion-content>
+ 
