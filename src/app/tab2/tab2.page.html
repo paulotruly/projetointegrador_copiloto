@@ -28,7 +28,6 @@
 
  .disc-all{
    padding: 10px 20px 0px 20px;
-   align-items: center;
  }
 
  .disc-all h1{
@@ -37,6 +36,24 @@
    font-weight: bold;
    padding-bottom: 10px;
  }
+
+  .disc-all ion-button h1{
+    font-size: 25px;
+    color: white;
+    margin-right: 6px;
+  }
+
+  .disc-all p{
+      color: white;
+      font-weight: 100;
+      padding-top: 10px;
+      font-size: 14px;
+    }
+
+  .disc-all ion-button{
+    display: block;
+    --background: rgba(26, 38, 203, 1);
+  }
 
   .topo a{
     color: rgba(26, 38, 203, 1);
@@ -119,29 +136,6 @@
     margin-bottom: 14px;
   }
 
-  #disc-i{
-    width: 100px;
-    height: 100px;
-    background-color: blueviolet;
-    border-radius: 20px;
-    margin: 5px;
-  }
-
-  #disc-ii{
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-    border-radius: 20px;
-    margin: 5px;
-  }
-
-  #disc-iii{
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    border-radius: 20px;
-    margin: 5px;
-  }
 
   .atvds h1{
     color: black;
@@ -153,14 +147,14 @@
 
 </style>
 
- <ion-header [translucent]="true">
+ <ion-header [translucent]="false">
    <ion-toolbar class="header">
      <nav id="barra-nav">
        <img src="https://i.imgur.com/yBaK7kC.png" id="header-logo" width="195px" height="62px">
 
        <ul id="header-botoes">
          <ion-button class="hb-items" size="small" fill="clear" class="bt-config"> <ion-icon name="cog"></ion-icon> </ion-button>
-         <ion-button class="hb-items" size="small" fill="clear" class="bt-logout"> <ion-icon name="log-out"></ion-icon> </ion-button>
+         <ion-button (click)="goToLogin()" class="hb-items" size="small" fill="clear" class="bt-logout"> <ion-icon name="log-out"></ion-icon> </ion-button>
        </ul>
      </nav>
    </ion-toolbar>
@@ -188,11 +182,10 @@
 
     <div class="disc-all">
       <h1> Disciplinas </h1>
-
       <div class="disc-topo">
-        <div id="disc-i"> </div>
-        <div id="disc-ii"> </div>
-        <div id="disc-iii"> </div>
+        <ion-button> <h1> Matemática aplicada </h1> <p> PROF. NOME COMPOSTO </p> </ion-button>
+        <ion-button> <h1> Projeto integrador </h1> <p> PROF. NOME COMPOSTO </p> </ion-button>
+        <ion-button> <h1> Lógica matemática </h1> <p> PROF. NOME COMPOSTO </p> </ion-button>
       </div>
     </div> 
 

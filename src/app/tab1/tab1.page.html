@@ -22,12 +22,6 @@
     color: black;
   }
 
-
-
-
-
-
-
   ion-content{
     --ion-background-color: white;
   }
@@ -50,12 +44,6 @@
     font-size: 15px;
     font-style: italic; 
   }
-
-
-
-
-
-   /* Aqui tô tentando fazer o CSS do comentário lá de baixo */
 
   ion-card{
     --background: rgb(244, 245, 255, 1);
@@ -104,14 +92,14 @@
 
 </style>
 
-  <ion-header [translucent]="true">
+  <ion-header [translucent]="false">
     <ion-toolbar class="header">
       <nav id="barra-nav">
         <img src="https://i.imgur.com/yBaK7kC.png" id="header-logo" width="195px" height="62px">
 
         <ul id="header-botoes">
           <ion-button class="hb-items" size="small" fill="clear" class="bt-config"> <ion-icon name="cog"></ion-icon> </ion-button>
-          <ion-button class="hb-items" size="small" fill="clear" class="bt-logout"> <ion-icon name="log-out"></ion-icon> </ion-button>
+          <ion-button (click)="goToLogin()" class="hb-items" size="small" fill="clear" class="bt-logout"> <ion-icon name="log-out"> </ion-icon> </ion-button>
         </ul>
       </nav>
     </ion-toolbar>
@@ -223,10 +211,6 @@
               </div>
                 <p id="prof-article"> Here's a small text description for the card content. Nothing more, nothing less. </p>
               </ion-card>
-
-
-
-
   
   </ion-content>
   

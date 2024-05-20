@@ -1,0 +1,63 @@
+<style>
+  ion-content{
+    --ion-background-color: rgba(26, 38, 203, 1);
+  }
+  
+  ion-card{
+    border-radius: 10%;
+  }
+
+  ion-card ion-card-content{
+    padding: 40px;
+  }
+
+  ion-card-content h1 {
+    padding-bottom: 20px;
+  }
+
+  ion-card-content .divslogin {
+    padding-bottom: 20px;
+  }
+
+  .botaologin{
+    float: right;
+  }
+
+  ion-card-content .divregistrar{
+    padding-top: 50px;
+    display: block;
+  } 
+
+  .divslogin input{
+    padding-left: 20px;
+  }
+
+
+</style>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-card-content>
+      <h1> Login </h1>
+      <div class="divslogin">
+      <ion-icon name="mail"></ion-icon> E-mail
+      <input>
+      </div>
+      <div class="divslogin">
+      <ion-icon name="lock-closed"></ion-icon> Senha
+      <input>
+      </div>
+
+      <ion-button (click)="goToApp()" class="botaologin"> Entrar </ion-button>
+
+      <div> 
+        <ion-button fill="clear" class="divregistrar"> Registrar-se </ion-button>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-footer> Copiloto © 2024 </ion-footer>
+
+</ion-content>
